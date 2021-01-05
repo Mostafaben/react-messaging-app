@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+  font-size: 13px !important;
+  font-family: 'Lato' !important;
+}
+
+.message {
+  height: fit-content;
+  max-width: 40%;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  width: fit-content;
+}
+.sent {
+  background-color: whitesmoke;
+  color: #313131;
+  align-self: flex-end;
+  border-bottom-right-radius: 0px !important;
+}
+.recived {
+  background-color: rgb(0, 0, 100);
+  color: white;
+  border-bottom-left-radius: 0px !important;
+}
+
+.conversation {
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.activeUser {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  font-size: 13px;
+}
+.activeUser img {
+  width: 45px;
+  height: 45px;
+  margin-right: 8px;
+  border-radius: 30px;
+}
+
+.inputContainer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  padding: 16px;
+  width: calc(100% - 32px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+.inputContainer input {
+  width: calc(90% - 16px);
+  height: 50px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 0px 16px;
+}
+
+.inputContainer button {
+  height: 50px;
+  color: white;
+  background-color: blue;
+  border: none;
+  width: 10%;
+  border-radius: 8px;
+}
+
+.activeUsers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: fit-content;
+}
