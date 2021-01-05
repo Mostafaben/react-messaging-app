@@ -1,0 +1,232 @@
+.row,
+.col {
+  padding: 0px !important;
+  margin: 0px !important;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.col:nth-child(1) {
+  border-right: 1px solid #dddddd;
+}
+.col:nth-child(2) {
+  position: relative !important;
+  background-color: rgb(245, 245, 255) !important;
+}
+
+.messageContainer {
+  position: relative;
+  max-width: 48%;
+  margin: 8px;
+  padding: 16px;
+  width: fit-content;
+  border-radius: 24px;
+  background-color: white;
+  font-size: 14px !important;
+  padding-bottom: 24px;
+}
+
+.sent {
+  border-bottom-right-radius: 0px !important;
+  align-self: flex-end;
+}
+.recived {
+  background-color: rgb(0, 0, 140);
+  color: white;
+  border-bottom-left-radius: 0px !important;
+}
+
+.messageTime {
+  bottom: 0px;
+  position: absolute;
+  color: #888888;
+  font-size: 11px !important;
+  right: 24px;
+  bottom: 8px;
+}
+
+.sent .messageTime {
+  right: unset !important;
+  left: 24px;
+}
+
+.activeUserContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 8px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.avatar {
+  min-width: 60px;
+  width: 60px;
+  height: 60px;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  margin-bottom: 4px;
+}
+
+.activeUserContainer p {
+  font-size: 13px !important;
+  max-width: 80px;
+  text-align: center;
+}
+
+.activeUsers {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 16px;
+}
+.activeUsers::-webkit-scrollbar {
+  display: none;
+}
+
+.searchContainer {
+  padding: 16px;
+  width: 100%;
+}
+
+.lastMessageContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  position: relative;
+  transition-duration: 200ms;
+  background-color: white;
+}
+.lastMessageContainer:hover {
+  background-color: whitesmoke;
+}
+p {
+  margin: 0px !important;
+}
+
+.lastMessageContainer .content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+.lastMessageContainer .content p {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.lastMessageContainer .content span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  -webkit-line-clamp: 2;
+}
+.lastMessageContainer .createdAt {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  font-size: 11px !important;
+  color: #888888;
+}
+
+.lastMessageContainer .active {
+  position: absolute;
+  z-index: 3;
+  left: 60px;
+  bottom: 20px;
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  border: 4px solid white;
+  background-color: rgb(0, 200, 0);
+}
+
+.conversationHeader {
+  height: 70px;
+  width: 100%;
+  /* box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); */
+  border-bottom: 1px solid #dddddd;
+  top: 0px;
+  right: 0px;
+  background-color: white;
+}
+.conversationContent {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-bottom: 90px;
+  width: 100%;
+  max-height: calc(100vh - 70px);
+  overflow-y: auto;
+}
+
+.conversationAction {
+  height: 80px;
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  left: 0px;
+}
+
+.conversationAction input {
+  border: 0px !important;
+  height: 55px;
+  border-radius: 30px;
+  margin: 0px;
+  outline: none;
+  background-color: rgb(248, 248, 248);
+  padding: 0px 20px;
+  transition-duration: 200ms;
+  width: 100%;
+}
+.conversationAction input:focus {
+  box-shadow: 0px 0px 2px darkblue;
+}
+
+@media only screen and (max-width: 800px) {
+  .activeUsers {
+    display: none !important;
+  }
+  .searchContainer {
+    display: none !important;
+  }
+
+  .lastMessageContainer {
+    align-items: center;
+    justify-content: center;
+  }
+  .lastMessageContainer .content {
+    display: none !important;
+  }
+  .lastMessageContainer .createdAt {
+    display: none !important;
+  }
+}
+
+.conversationUserContainer {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  padding: 0px 10px;
+  align-items: center;
+}
+.conversationUserContainer img {
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+.conversationUserContainer p {
+  font-weight: bold;
+}

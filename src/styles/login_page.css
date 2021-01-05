@@ -1,0 +1,8 @@
+.card {
+  width: min(90%, 400px);
+}
+
+.link {
+  margin: 8px 0px !important;
+  font-size: 13px !important;
+}
